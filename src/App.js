@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import UserOutput from './Components/UserOutput';
 import UserInput from './Components/UserInput';
+import './Components/Styling.css';
+
 
 class App extends Component {
 
@@ -24,31 +26,24 @@ class App extends Component {
 
 
   render() {
-    // return (
-    //   <div className="App">
-    //     <header className="App-header">
-    //       <img src={logo} className="App-logo" alt="logo" />
-    //       <p>
-    //         Edit <code>src/App.js</code> and save to reload.
-    //       </p>
-    //       <a
-    //         className="App-link"
-    //         href="https://reactjs.org"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Learn React
-    //       </a>
-    //     </header>
-    //   </div>
-    // );
+
+    const style = { 
+      backgroundColor: 'gray',
+      padding: '5px',
+      border: '1px solid blue'
+    }
+
 
 
     return ( 
       <div>
         <UserInput changed={this.changeState} username={this.state.username}/>
-        <UserOutput username={this.state.username}/>
-        <UserOutput username={this.state.username}/>
+        <div style = {style}>
+          <UserOutput username={this.state.username}/>
+        </div>
+        <div className='styling'>
+          <UserOutput username={this.state.username}/>
+        </div>
       </div>
     )
 
